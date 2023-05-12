@@ -76,11 +76,12 @@ function Content() {
         
 
     </div>
-    <div className='shadow-lg rounded-lg w-full md:w-fit px-10 bg-white flex justify-center m-auto z-[10] mb-10 py-5'>
-        <div className='grid grid-row-2  '>
+    <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white  m-auto z-[10] mb-10 py-5'>
+        <div className='grid grid-row-2 '>
             <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
+          
             <form>
-            <div class="mb-4 grid  grid-cols-1  md:grid-cols-4 gap-5">
+            <div class="mb-4 grid  grid-cols-1   md:grid-cols-4 gap-5">
               <div>
                 <label className="block text-gray-700/70 text-sm font-bold mb-2" for="username">
                   Username
@@ -107,7 +108,53 @@ function Content() {
             </div>
           </form>
         </div>
-    </div>
+      </div>
+
+      <div className='container mx-auto flex grid justify-stretch  w-full md:w-3/4 '>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+        <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
+            <div className='grid grid-cols-1 lg:grid-cols-4'>
+              <span className='text-8xl lg:text-5xl grid  place-items-center '>
+              <ion-icon name="cube"></ion-icon>
+              </span>
+            <div className='col-span-3'>
+            
+            <p className='font-bold text-xl'>Japanti Design</p>
+            <p className='font-bold text-m text-gray-400'>Desain space-saving oleh desainer propesional</p>
+            
+            </div>
+            </div>
+          </div> 
+          <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
+            <div className='grid grid-cols-1 lg:grid-cols-4'>
+              <span className='text-8xl lg:text-5xl grid  place-items-center '>
+              <ion-icon name="wallet"></ion-icon>
+              </span>
+            <div className='col-span-3'>
+             
+            <p className='font-bold text-xl'>36x Cicilan</p>
+            <p className='font-bold text-m text-gray-400'>bayar lebih ringan, transaksi jadi makain mudah</p>
+          
+            </div>
+            </div>
+          </div>
+          <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
+            <div className='grid grid-cols-1 lg:grid-cols-4'>
+              <span className='text-8xl lg:text-5xl grid place-items-center'>
+              <ion-icon name="time"></ion-icon>
+              </span>
+            <div className='col-span-3'>
+              
+            <p className='font-bold text-xl '>Garansi 2 Tahun</p>
+            <p className='font-bold text-m  text-gray-400'>jaminan barang berkualitas bikin tenang & nyaman</p>
+         
+            </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
     </div>
     
   )
