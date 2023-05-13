@@ -154,6 +154,11 @@ function Content() {
 
         </div>
 
+
+            <div className='m-auto py-20  '>
+                
+              <p className='text-4xl md:text-5xl font-bold text-center'>Upgrade Interior untuk Kebiasaan Barumu</p>
+              </div>
       </div>
     </div>
     
