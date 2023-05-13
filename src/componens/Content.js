@@ -1,6 +1,6 @@
 import React , { useState } from 'react'
-import {BsChevronCompactLeft,BsChevronCompactRight } from "../../node_modules/react-icons/bs";
-import {RxDotFilled } from "../../node_modules/react-icons/rx";
+import {BsChevronCompactLeft,BsChevronCompactRight } from "react-icons/bs";
+import {RxDotFilled } from "react-icons/rx";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from './AdsImg';
@@ -90,32 +90,39 @@ function Content() {
       <Card url={items.url} title={items.title} decs={items.decs}/>
     )
   return (
-    <div> 
-    <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover">
-        <section className="hero-container bg-teal-600/90 py-20 ">
+  <div> 
+    <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
+        <section className="hero-container bg-teal-600/90 py-20 h-[600px]">
             <div className='img-container hidden md:inline text-white pl-20 pb duration-300'>
                 <p class="font-semibold text-2xl mt-5 mb-10">Design Interior</p>
                 <p class="font-bold text-4xl"><a className='text-yellow-400'>Design Hunian</a> Untuk</p>
                 <p class="font-bold text-4xl mb-10">Kebiasaan Barumu</p>
                 <p class="font-medium text-2xl"><a className='text-yellow-400'>3000+</a> hunian impian telah terwujud</p>
             </div>         
-                  <Carousel responsive={responsive} className='img-carousel pt-20'>
-                  {imageSlide}
-                  </Carousel>
-                
-              <div className='flex top-4 justify-center py-2'>
-                            { 
-                    sildes.map((sildes, slideIndex) => (
-                        <div index={slideIndex} onClick={() => goToSlide(slideIndex)} className=' text-2xl text-white mt-10 cursor-pointer'>
-                            <RxDotFilled/>
-                        </div>         
-                    ))}
-            </div>
         </section>
+        <section className="hero-container h-[1400px] md:h-[700px] bg-white"></section>
+        <section className="hero-container h-[1000px] md:h-[800px] bg-teal-600"></section>
+
         
 
     </div>
-    <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white  m-auto z-[10] mb-10 py-5'>
+  <div className='w-full -mt-[2950px] md:-mt-[2050px] z-[6]' >
+      <div>
+
+      <Carousel responsive={responsive} className='img-carousel pt-20'>
+                      {imageSlide}
+      </Carousel>
+                      <div className='flex top-4 justify-center '>
+                                { 
+                        sildes.map((sildes, slideIndex) => (
+                            <div index={slideIndex} onClick={() => goToSlide(slideIndex)} className=' text-2xl text-white mt-10 cursor-pointer'>
+                                <RxDotFilled/>
+                            </div>         
+                        ))}
+                </div>
+      </div>
+                
+    <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white m-auto  my-10  py-5'>
         <div className='grid grid-row-2 '>
             <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
           
@@ -148,6 +155,8 @@ function Content() {
           </form>
         </div>
       </div>
+      </div>
+    
 
       <div className='container mx-auto flex grid justify-stretch  w-full md:w-3/4 '>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
@@ -193,17 +202,18 @@ function Content() {
 
         </div>
 
-
+      <div className='container'>
             <div className='m-auto py-20  '>
               <p className='text-4xl md:text-5xl font-bold text-center'>Upgrade Interior untuk Kebiasaan Barumu</p>
               </div>
 
-<div className='container flex grid justify-stretch'>
+        <div className='container flex grid justify-stretch'>
 
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+              <div className='grid grid-cols-2 md:grid-cols-3 gap-5'>
                {categoryCard}
               </div>
-</div>
+        </div>
+        </div> 
       </div>
     </div>
     
