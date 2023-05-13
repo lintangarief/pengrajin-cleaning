@@ -4,8 +4,43 @@ import {RxDotFilled } from "../../node_modules/react-icons/rx";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from './AdsImg';
+import Card from './Card';
 
 function Content() {
+
+    const categories = [
+      {
+        url : 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        title :'Kitchen Set',
+        decs :'Dapur yang bikin chef andalan keluarga selalu jadi ingin masak.'
+      },
+      {
+        url : 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwbGl2aW5nJTIwcm9vbXxlbnwwfHwwfHw%3D&w=1000&q=80',
+        title :'Rumah',
+        decs :'Desain interior rumah jadi lebih leluasa untuk lakukan banyak aktivitas baru.'
+      },
+      {
+        url : 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        title :'Apartemen',
+        decs :'Manfaatkan satu ruang untuk berbagai aktivitasmu dengan desain space-saving.'
+      },
+      {
+        url : 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80',
+        title :'Lemari Custom',
+        decs :'Desain lemari yang paling pas buatmu. Semua jadi lebih rapi dan mudah dicari.'
+      },
+      {
+        url : 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        title :'Kantor',
+        decs :'Tingkatkan performa bisnismu dengan interior kantor kreatif yang pas buat milenial.'
+      },
+      {
+        url : 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+        title :'Hotel',
+        decs :'Berikan pengalaman terbaik untuk customermu dan raih kesuksesan bisnis.'
+      },
+    ]
+
     const sildes = [
       {
         url : 'https://i.ytimg.com/vi/eceIzncLEgc/maxresdefault.jpg'
@@ -49,6 +84,10 @@ function Content() {
 
     const imageSlide = sildes.map((items) =>
       <Image url={items.url}/>
+    )
+
+    const categoryCard = categories.map((items) =>
+      <Card url={items.url} title={items.title} decs={items.decs}/>
     )
   return (
     <div> 
@@ -156,9 +195,15 @@ function Content() {
 
 
             <div className='m-auto py-20  '>
-                
               <p className='text-4xl md:text-5xl font-bold text-center'>Upgrade Interior untuk Kebiasaan Barumu</p>
               </div>
+
+<div className='container flex grid justify-stretch'>
+
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+               {categoryCard}
+              </div>
+</div>
       </div>
     </div>
     
