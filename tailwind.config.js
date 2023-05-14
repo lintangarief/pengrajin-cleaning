@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'hero-texture': "url('assets/hero-texture.jpg')",
-      }
+      },
     },
   },
   plugins: [],

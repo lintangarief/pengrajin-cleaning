@@ -5,6 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from './AdsImg';
 import Card from './Card';
+import SingleCarousel from './SingleCarousel';
 
 function Content() {
 
@@ -101,7 +102,7 @@ function Content() {
         items: 2
       },
       mobile: {
-        breakpoint: { max: 500, min: 0 },
+        breakpoint: { max: 464, min: 0 },
         items: 1
       }
     };
@@ -128,7 +129,7 @@ function Content() {
   
     <div>
         <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
-            <section className="hero-container bg-teal-600/90 py-20 h-[600px]">
+            <section className="hero-container bg-teal-600/90 py-20 h-[500px] md:h-[600px]">
             <div className='img-container hidden md:inline text-white pl-20 pb duration-300'>
                     <p class="font-semibold text-2xl mt-5 mb-10">Design Interior</p>
                     <p class="font-bold text-4xl"><a className='text-yellow-400'>Design Hunian</a> Untuk</p>
@@ -136,19 +137,22 @@ function Content() {
                 <p class="font-medium text-2xl"><a className='text-yellow-400'>3000+</a> hunian impian telah terwujud</p>
                 </div>
             </section>
-            <section className="hero-container h-[1400px] md:h-[700px] bg-white"></section>
+            <section className="hero-container h-[1400px] md:h-[600px] bg-white"></section>
             <section className="hero-container h-[1000px] md:h-[800px] bg-teal-600"></section>
 
 
 
         </div>
-  <div className='w-full -mt-[2950px] md:-mt-[2050px] z-[6]' >
+  <div className='w-full -mt-[2950px] md:-mt-[1950px] z-[6]' >
             <div>
-
-                <Carousel responsive={responsive} className='img-carousel pt-20'>
+              <SingleCarousel img={sildes.url} ></SingleCarousel>
+              
+              </div>
+              <div className='hidden md:inline'>
+                <Carousel responsive={responsive} className=' img-carousel pl-[0%] lg:pl-[35%] md:pl-[0%] pt-20'>
                     {imageSlide}
                 </Carousel>
-                <div className='flex top-4 justify-center '>
+                <div className='flex top-4 justify-center'>
                     {
                     sildes.map((sildes, slideIndex) => (
                     <div index={slideIndex} onClick={()=> goToSlide(slideIndex)} className=' text-2xl text-white mt-10
@@ -159,7 +163,7 @@ function Content() {
                 </div>
             </div>
 
-            <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white m-auto  my-10  py-5'>
+            <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white m-auto  my-5 md:my-10 '>
                 <div className='grid grid-row-2 '>
                     <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
 

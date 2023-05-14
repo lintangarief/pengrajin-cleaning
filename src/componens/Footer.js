@@ -23,6 +23,7 @@ function Footer() {
                         <p className='text-white font-medium text-m mb-5'>hello@pengrajin.com</p>  
                     </div>
                     <div>
+                        <hr className='mb-5 block md:hidden'></hr>
                         <p className='text-white/70  font-medium text-m mb-5'>Dekoruma Desain Interior</p>
                         <p className='text-white font-medium text-m mb-5'>Tanya Harga</p>
                         <p className='text-white font-medium text-m mb-5'>Kitchen Dama</p>
@@ -34,6 +35,7 @@ function Footer() {
                         <p className='text-white font-medium text-m mb-5'>Interior Untuk Bisnismu</p>  
                     </div>
                     <div>
+                        <hr className='mb-5 block md:hidden'></hr>
                         <p className='text-white/70  font-medium text-m mb-5'>Portofolio</p>
                         <p className='text-white font-medium text-m mb-5'>Semua Portofolio</p>
                         <p className='text-white font-medium text-m mb-5'>Kitchen Set</p>
@@ -45,6 +47,7 @@ function Footer() {
                         <p className='text-white font-medium text-m mb-5'>Hospitality & Retail</p>  
                     </div>
                     <div>
+                        <hr className='mb-5 block md:hidden'></hr>
                         <p className='text-white/70  font-medium text-m mb-5'>Company</p>
                         <p className='text-white font-medium text-m mb-5'>Tentang Kami</p>
                         <p className='text-white font-medium text-m mb-5'>Help Center</p>
