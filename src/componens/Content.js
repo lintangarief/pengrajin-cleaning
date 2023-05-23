@@ -123,13 +123,12 @@ function Content() {
         </div>
     </details>
     )
-      
-
+    
   return (
   
     <div>
         <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
-            <section className="hero-container bg-teal-600/90 py-20 h-[500px] md:h-[600px]">
+            <section className="hero-container bg-pengrajin-blue/90 py-20 h-[500px] md:h-[600px]">
             <div className='img-container hidden md:inline text-white pl-20 pb duration-300'>
                     <p class="font-semibold text-2xl mt-5 mb-10">Design Interior</p>
                     <p class="font-bold text-4xl"><a className='text-yellow-400'>Design Hunian</a> Untuk</p>
@@ -138,7 +137,7 @@ function Content() {
                 </div>
             </section>
             <section className="hero-container h-[1400px] md:h-[600px] bg-white"></section>
-            <section className="hero-container h-[1000px] md:h-[800px] bg-teal-600"></section>
+            <section className="hero-container h-[1000px] md:h-[800px] bg-pengrajin-blue"></section>
 
 
 
@@ -195,7 +194,7 @@ function Content() {
                             </div>
                             <div>
                                 <button
-                                    class="mt-6 bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-10 w-full  rounded focus:outline-none focus:shadow-outline duration-300"
+                                    class="mt-6 bg-pengrajin-blue hover:bg-pengrajin-blue/50 text-white font-bold py-3 px-10 w-full  rounded focus:outline-none focus:shadow-outline duration-300"
                                     type="button">
                                     Tanya Harga
                                 </button>
@@ -309,7 +308,7 @@ function Content() {
                   <p className='text-5xl font-bold mb-5'>Cicilan 0% Hingga 36 Bulan</p>
                   <p className='font-medium text-2xl text-gray-400'>Kamu bisa melakukan cicilan 0% dalam waktu 3, 6, 12, 18, 24, hingga 36 bulan</p>
                   <button
-                    class="mt-6 border-teal-600 border-2  text-teal-600 font-bold py-3 px-10  rounded focus:outline-none focus:shadow-outline duration-300"
+                    class="mt-6 border-pengrajin-blue border-2  text-pengrajin-blue font-bold py-3 px-10  rounded focus:outline-none focus:shadow-outline duration-300"
                     type="button">
                     Lihat Selengkapnya
                   </button>

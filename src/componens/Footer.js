@@ -3,16 +3,16 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-        <div className='w-full bg-teal-600'>
+        <div className='w-full bg-pengrajin-blue'>
             <div className='m-auto w-3/4 py-[50px]'>
                 <div className='grid grid-cols-1 md:grid-cols-4'>
                     <p className='text-3xl font-bold  text-white col-span-3 mb-5'>Siap Wujudkan Interior Impianmu?</p>
-                    <button class=" bg-white text-center text-teal-700 font-bold py-3 px-10 rounded w-full" type="button">
+                    <button class=" bg-white text-center text-pengrajin-blue font-bold py-3 px-10 rounded w-full" type="button">
                     Tanya Harga
                     </button>
                 </div>
             </div>
-            <div className='bg-teal-800 py-[50px] '>
+            <div className='bg-pengrajin-blue-dark py-[50px] '>
                 <div className='m-auto w-3/4 grid grid-cols-1 md:grid-cols-4'>
                     <div>
                         <p className='text-white font-bold text-2xl'>Pengrajin.com</p>
