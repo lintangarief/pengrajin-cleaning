@@ -2,7 +2,6 @@ import React , { useState } from 'react'
 import {BsChevronCompactLeft,BsChevronCompactRight } from "react-icons/bs";
 import {RxDotFilled } from "react-icons/rx";
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 import Image from './AdsImg';
 import Card from './Card';
 import SingleCarousel from './SingleCarousel';
@@ -78,7 +77,7 @@ function Content() {
       },
       {
         url : 'https://awsimages.detik.net.id/community/media/visual/2023/03/04/simpati-furniture.jpeg?w=900'
-      }  
+      }
     ];
 
     const [imgIndex, setimgIndex] = useState(3)
@@ -123,9 +122,9 @@ function Content() {
         </div>
     </details>
     )
-    
+
   return (
-  
+
     <div>
         <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
             <section className="hero-container bg-pengrajin-blue/90 py-20 h-[500px] md:h-[600px]">
@@ -145,7 +144,7 @@ function Content() {
   <div className='w-full -mt-[2950px] md:-mt-[1950px] z-[6]' >
             <div>
               <SingleCarousel img={sildes.url} ></SingleCarousel>
-              
+
               </div>
               <div className='hidden md:inline'>
                 <Carousel responsive={responsive} className=' img-carousel pl-[0%] lg:pl-[35%] md:pl-[0%] pt-20'>
@@ -165,7 +164,6 @@ function Content() {
             <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white m-auto  my-5 md:my-10 '>
                 <div className='grid grid-row-2 '>
                     <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
-
                     <form>
                         <div class="mb-4 grid  grid-cols-1   md:grid-cols-4 gap-5">
                             <div>
@@ -211,14 +209,12 @@ function Content() {
                 <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <div className='grid grid-cols-1 lg:grid-cols-4'>
                         <span className='text-8xl lg:text-5xl grid  place-items-center '>
-                            <ion-icon name="cube"></ion-icon>
+                            <ionIcon name="cube"></ionIcon>
                         </span>
                         <div className='col-span-3'>
-
                             <p className='font-bold text-xl'>Japanti Design</p>
                             <p className='font-bold text-m text-gray-400'>Desain space-saving oleh desainer propesional
                             </p>
-
                         </div>
                     </div>
                 </div>
@@ -228,10 +224,8 @@ function Content() {
                             <ion-icon name="wallet"></ion-icon>
                         </span>
                         <div className='col-span-3'>
-
                             <p className='font-bold text-xl'>36x Cicilan</p>
                             <p className='font-bold text-m text-gray-400'>bayar lebih ringan, transaksi jadi makain mudah</p>
-
                         </div>
                     </div>
                 </div>
@@ -269,40 +263,40 @@ function Content() {
                   <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/mandiri.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20' alt='mandiri'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bni.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20' alt=''></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bca.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bri.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
                   <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/maybank.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/citibank.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/ocbc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/hsbc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
                   <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/mnc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bukopin.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/panin.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'> 
+                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/permata.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
                   </div>
-                        
+
                 </div>
                 <div className='px-5'>
                   <p className='text-5xl font-bold mb-5'>Cicilan 0% Hingga 36 Bulan</p>
@@ -313,8 +307,8 @@ function Content() {
                     Lihat Selengkapnya
                   </button>
                 </div>
-                
-              
+
+
               </div>
             </div>
             <section className="mt-5">
