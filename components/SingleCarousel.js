@@ -4,16 +4,16 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const sildes = [
     {
-      url : 'https://i.ytimg.com/vi/eceIzncLEgc/maxresdefault.jpg'
+      url : 'https://www.pengrajin.com/static-images/login-3.png'
     },
     {
-      url : 'https://cdn-2.tstatic.net/jateng/foto/bank/images/ragam-rabu.jpg'
+      url : 'https://www.pengrajin.com/static-images/login-3.png'
     },
     {
-      url : 'https://images.tokopedia.net/img/cache/1200/BgtCLw/2021/8/27/d040e4b4-0cab-4f38-ad3f-4e44b7534abd.jpg'
+      url : 'https://www.pengrajin.com/static-images/login-3.png'
     },
     {
-      url : 'https://awsimages.detik.net.id/community/media/visual/2023/03/04/simpati-furniture.jpeg?w=900'
+      url : 'https://www.pengrajin.com/static-images/login-3.png'
     }  
   ];
 
@@ -23,7 +23,7 @@ const sildes = [
 
   <div className='w-full'>
       <div className='bg-transparant'>
-           <div className='img-wrapper shadow-lg img-cover bg-cover bg-center mt-[50px]  w-full h-[500px] ' style={{backgroundImage: `url(${items.url})`}} ></div>
+           <div className='img-wrapper shadow-lg bg-contain bg-center bg-no-repeat mt-[50px]  w-full h-[500px] ' style={{backgroundImage: `url(${items.url})`}} ></div>
       </div>
   </div>
   
@@ -33,7 +33,6 @@ const sildes = [
 function SingleCarousel(props) {
   return (
     <Carousel autoPlay className='inline md:hidden'>
-
    {imageSlide}
     </Carousel>
   )

@@ -1,12 +1,9 @@
 import React , { useState } from 'react'
-import {BsChevronCompactLeft,BsChevronCompactRight } from "react-icons";
-import {RxDotFilled } from "react-icons/rx";
 import Carousel from 'react-multi-carousel';
 import Image from './AdsImg';
 import Card from './Card';
 import SingleCarousel from './SingleCarousel';
-import * as icons from "@swiftcarrot/react-ionicons";
-import { IonIcon } from '@ionic/core';
+ 
 import { CubeSharp,Wallet ,Time } from 'react-ionicons'
 
 function Content() {
@@ -70,16 +67,16 @@ function Content() {
 
     const sildes = [
       {
-        url : 'https://i.ytimg.com/vi/eceIzncLEgc/maxresdefault.jpg'
+        url : 'https://www.pengrajin.com/static-images/login-1.png'
       },
       {
-        url : 'https://cdn-2.tstatic.net/jateng/foto/bank/images/ragam-rabu.jpg'
+        url : 'https://www.pengrajin.com/static-images/login-2.png'
       },
       {
-        url : 'https://images.tokopedia.net/img/cache/1200/BgtCLw/2021/8/27/d040e4b4-0cab-4f38-ad3f-4e44b7534abd.jpg'
+        url : 'https://www.pengrajin.com/static-images/login-3.png'
       },
       {
-        url : 'https://awsimages.detik.net.id/community/media/visual/2023/03/04/simpati-furniture.jpeg?w=900'
+        url : 'https://www.pengrajin.com/static-images/login-3.png'
       }
     ];
 
@@ -124,7 +121,7 @@ function Content() {
   return (
 
     <div>
-        <div className="hero-container min-h-0 max-h-full bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
+        <div className="hero-container min-h-0 max-h-full  bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
             <section className="hero-container bg-pengrajin-blue/90 py-20 h-[500px] md:h-[600px]">
             <div className='img-container hidden md:inline text-white pl-20 pb duration-300'>
                     <p class="font-semibold text-2xl mt-5 mb-10">Design Interior</p>
@@ -142,7 +139,6 @@ function Content() {
   <div className='w-full -mt-[2950px] md:-mt-[1950px] z-[6]' >
             <div>
               <SingleCarousel img={sildes.url} ></SingleCarousel>
-
               </div>
               <div className='hidden md:inline'>
                 <Carousel responsive={responsive} className=' img-carousel pl-[0%] lg:pl-[35%] md:pl-[0%] pt-20'>
@@ -157,10 +153,10 @@ function Content() {
                 <div className='grid grid-row-2 '>
                     <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
                     <form>
-                        <div class="mb-4 grid  grid-cols-1   md:grid-cols-4 gap-5">
+                        <div class="mb-4 grid  grid-cols-1   md:grid-cols-5 gap-5">
                             <div>
                                 <label className="block text-gray-700/70 text-sm font-bold mb-2" for="username">
-                                    Username
+                                    Nama
                                 </label>
                                 <input
                                     className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight   focus:outline-none focus:shadow-outline"
@@ -168,7 +164,7 @@ function Content() {
                             </div>
                             <div>
                                 <label className="block text-gray-700/70 text-sm font-bold mb-2" for="phone">
-                                    Phone
+                                    Nomer Handphone
                                 </label>
                                 <input
                                     className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -181,6 +177,14 @@ function Content() {
                                 <input
                                     className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="email" type="text" placeholder="Misalkan, dedi@mail.com" />
+                            </div>
+                            <div>
+                                <label className="block text-gray-700/70 text-sm font-bold mb-2" for="email">
+                                    Note
+                                </label>
+                                <textarea
+                                    className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="email" type="text" placeholder="Misalkan, Bagaimana saya ingin custom bagian..." />
                             </div>
                             <div>
                                 <button
