@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Menu, Close } from 'react-ionicons'
 function Header() {
   let Links =[
     {name:"Product",link:"/"},
@@ -19,7 +20,8 @@ function Header() {
       </div>
       
       <div onClick={()=>setOpen(!open)} className='text-5xl absolute right-8 top-4 cursor-pointer md:hidden'>
-      <ion-icon name={open ? 'close':'menu'}></ion-icon>
+      {open ?  <Close  color={'#00000'} height="50px" width="50px" /> :  <Menu  color={'#00000'} height="50px" width="50px" />
+      }     
       </div>
 
       <ul className={`md:flex md:items-center pb-0 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-15 ':'top-[-450px]'}`}>

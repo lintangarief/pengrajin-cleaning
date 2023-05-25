@@ -1,10 +1,13 @@
 import React , { useState } from 'react'
-import {BsChevronCompactLeft,BsChevronCompactRight } from "react-icons/bs";
+import {BsChevronCompactLeft,BsChevronCompactRight } from "react-icons";
 import {RxDotFilled } from "react-icons/rx";
 import Carousel from 'react-multi-carousel';
 import Image from './AdsImg';
 import Card from './Card';
 import SingleCarousel from './SingleCarousel';
+import * as icons from "@swiftcarrot/react-ionicons";
+import { IonIcon } from '@ionic/core';
+import { CubeSharp,Wallet ,Time } from 'react-ionicons'
 
 function Content() {
 
@@ -80,12 +83,7 @@ function Content() {
       }
     ];
 
-    const [imgIndex, setimgIndex] = useState(3)
-
-    const goToSlide = (slideIndex) => {
-        setimgIndex(slideIndex)
-
-    }
+   
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.
@@ -151,13 +149,7 @@ function Content() {
                     {imageSlide}
                 </Carousel>
                 <div className='flex top-4 justify-center'>
-                    {
-                    sildes.map((sildes, slideIndex) => (
-                    <div index={slideIndex} onClick={()=> goToSlide(slideIndex)} className=' text-2xl text-white mt-10
-                        cursor-pointer'>
-                        <RxDotFilled />
-                    </div>
-                    ))}
+                    
                 </div>
             </div>
 
@@ -209,7 +201,12 @@ function Content() {
                 <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <div className='grid grid-cols-1 lg:grid-cols-4'>
                         <span className='text-8xl lg:text-5xl grid  place-items-center '>
-                            <ionIcon name="cube"></ionIcon>
+                       
+                          <CubeSharp
+                            color={'#00000'} 
+                            height="80px"
+                            width="80px"
+                          />
                         </span>
                         <div className='col-span-3'>
                             <p className='font-bold text-xl'>Japanti Design</p>
@@ -221,7 +218,11 @@ function Content() {
                 <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <div className='grid grid-cols-1 lg:grid-cols-4'>
                         <span className='text-8xl lg:text-5xl grid  place-items-center '>
-                            <ion-icon name="wallet"></ion-icon>
+                        <Wallet
+                            color={'#00000'} 
+                            height="80px"
+                            width="80px"
+                          />
                         </span>
                         <div className='col-span-3'>
                             <p className='font-bold text-xl'>36x Cicilan</p>
@@ -232,7 +233,11 @@ function Content() {
                 <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
                     <div className='grid grid-cols-1 lg:grid-cols-4'>
                         <span className='text-8xl lg:text-5xl grid place-items-center'>
-                            <ion-icon name="time"></ion-icon>
+                        <Time
+                            color={'#00000'} 
+                            height="80px"
+                            width="80px"
+                          />
                         </span>
                         <div className='col-span-3'>
 
