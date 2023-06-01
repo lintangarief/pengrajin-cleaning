@@ -1,13 +1,8 @@
-import React , { useState } from 'react'
-import Carousel from 'react-multi-carousel';
-import Image from './AdsImg';
-import Card from './Card';
-import SingleCarousel from './SingleCarousel';
- 
-import { CubeSharp,Wallet ,Time } from 'react-ionicons'
+import React from 'react'
+import { PlayForward, BagCheck, Cash, Pricetag } from 'react-ionicons'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-function Content() {
-
+function content() {
   const textFAQ = [
     {
       title : "Apa yang harus dilakukan jika tertarik menggunakan jasa Desain Interior Pengrajin.com?",
@@ -29,309 +24,425 @@ function Content() {
       title : "Apa yang terjadi jika desain pertama yang diberikan tidak sesuai dengan keinginan klien?",
       decs : "Dalam proses pengerjaan proyek desain interior, Pengrajin.com memberikan kesempatan sebanyak 3 (tiga) kali revisi desain yang mencakup style desain, budget, dan pilihan produk serta material."
     },
-
   ]
 
-    const categories = [
-      {
-        url : 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        title :'Kitchen Set',
-        decs :'Dapur yang bikin chef andalan keluarga selalu jadi ingin masak.'
-      },
-      {
-        url : 'https://images.unsplash.com/photo-1631679706909-1844bbd07221?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZXJuJTIwbGl2aW5nJTIwcm9vbXxlbnwwfHwwfHw%3D&w=1000&q=80',
-        title :'Rumah',
-        decs :'Desain interior rumah jadi lebih leluasa untuk lakukan banyak aktivitas baru.'
-      },
-      {
-        url : 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        title :'Apartemen',
-        decs :'Manfaatkan satu ruang untuk berbagai aktivitasmu dengan desain space-saving.'
-      },
-      {
-        url : 'https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174&q=80',
-        title :'Lemari Custom',
-        decs :'Desain lemari yang paling pas buatmu. Semua jadi lebih rapi dan mudah dicari.'
-      },
-      {
-        url : 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        title :'Kantor',
-        decs :'Tingkatkan performa bisnismu dengan interior kantor kreatif yang pas buat milenial.'
-      },
-      {
-        url : 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-        title :'Hotel',
-        decs :'Berikan pengalaman terbaik untuk customermu dan raih kesuksesan bisnis.'
-      },
-    ]
+  
+  const sildeProducts = [
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fs1loq7n6pnppivv6b5l3qaxli6fv%2Fmedium%2F2669_Reese-3-piece-sofa_platinum_front.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fsxfdkycnkdnpgvt1kzqvhle1s18m%2Fmedium%2F2573_Charlie-sofa-mid-gray_front.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2F54kqv0ras035t3lwg2ys61xb53qy%2Fmedium%2Fsheeting.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fwkhuie3g73318nowegrklh5j1t8a%2Fmedium%2F2570_Madison-sofa-gray_front.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fs5qw3pvp5tbtvdxwkmdrog39w8nu%2Fmedium%2F2516_Camila-Rug-7-10x10_Top-Corner.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fixh6m6kd8rx8tq7gr31vjduqhj8m%2Fmedium%2F2513_Sadie-Rug-7-10x10_Top-Corner.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2Fmrrwelabd1ip78yqvwvlxp67sujf%2Fmedium%2F2512_Sadie-Rug-5-3x7-9_Top-Corner.jpg&w=2400&q=90'
+    },
+    {
+      name: 'Reese 3-Piece Sofa, Platinum',
+      rent : '130K/bulan',
+      price : '500K to buy',
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2F11r21va0wlo32rvth0m0kjsyj88a%2Fmedium%2F2514_Karma-Rug-5-3x7-9_Top-Corner.jpg&w=2400&q=90'
+    }
+  ];
 
-    const sildes = [
-      {
-        url : 'https://www.pengrajin.com/static-images/login-1.png'
-      },
-      {
-        url : 'https://www.pengrajin.com/static-images/login-2.png'
-      },
-      {
-        url : 'https://www.pengrajin.com/static-images/login-3.png'
-      },
-      {
-        url : 'https://www.pengrajin.com/static-images/login-3.png'
-      }
-    ];
-
-   
-    const responsive = {
-      superLargeDesktop: {
-        // the naming can be any, depends on you.
-        breakpoint: { max: 4000, min: 2500 },
-        items: 5
-      },
-      desktop: {
-        breakpoint: { max: 2500, min: 1024 },
-        items: 3
-      },
-      tablet: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 2
-      },
-      mobile: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1
-      }
-    };
-
-    const imageSlide = sildes.map((items) =>
-      <Image url={items.url}/>
-    )
-
-    const categoryCard = categories.map((items) =>
-      <Card url={items.url} title={items.title} decs={items.decs}/>
-    )
-
-    const faq = textFAQ.map((items) =>
-    <details className='py-5'>
-        <summary className="py-2 font-bold text-xl cursor-pointer">{items.title}</summary>
-        <div className="px-4 pb-4">
-          <p className='whitespace-break-spaces text-justify'>{items.decs}</p>
-        </div>
-    </details>
-    )
-
-  return (
-
-    <div>
-        <div className="hero-container min-h-0 max-h-full  bg-hero-texture bg-fixed bg-center bg-cover -z-10 relative">
-            <section className="hero-container bg-pengrajin-blue/90 py-20 h-[500px] md:h-[600px]">
-            <div className='img-container hidden md:inline text-white pl-20 pb duration-300'>
-                    <p class="font-semibold text-2xl mt-5 mb-10">Design Interior</p>
-                    <p class="font-bold text-4xl"><a className='text-yellow-400'>Design Hunian</a> Untuk</p>
-                    <p class="font-bold text-4xl mb-10">Kebiasaan Barumu</p>
-                <p class="font-medium text-2xl"><a className='text-yellow-400'>3000+</a> hunian impian telah terwujud</p>
-                </div>
-            </section>
-            <section className="hero-container h-[1400px] md:h-[600px] bg-white"></section>
-            <section className="hero-container h-[1000px] md:h-[800px] bg-pengrajin-blue"></section>
+  const sildes = [
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FuRLVkoQRLhQpJJSgkBZWPJtR%2Flarge%2F_mooreaseal_IRL.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2F71Gwca4eA8r3uNMdHcogqGZw%2Flarge%2F_amber108_Feed.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FSF6151oWX6aXbCQzrifrpMjY%2Flarge%2F_hayleaulaw_IRL.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FNg9Kr5TdTuwtP8KRSF9quGrE%2Flarge%2F222445688_180495384132164_4557011500009750171_n.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2F7JjMTjxRqvCbYHNEQnLu6PL8%2Flarge%2F3A4B9189-B746-4498-9487-03499DEE62C5-25782-000009A71E9FE2A2.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FprfNyrdHoaYReJAVso6afdi2%2Flarge%2F149088011_180882150061451_641171367964678593_n.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FJX3E82YWhYxP1e8zYEqe3JjG%2Flarge%2F_sophiaparker_IRL.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FyWcbn98Xb1r1xXSr4YibdxRp%2Flarge%2F_withlovesummer_IRL_2.jpg&w=2400&q=90'
+    },
+    {
+      url : 'https://fernish.com/_next/image?url=https%3A%2F%2Ffernish.com%2Fmedia%2FdhEu2PUXkXF1cUGikYE418Vi%2Flarge%2F_dez_taan_IRL_2.JPG&w=2400&q=90'
+    }
+  ];
 
 
+  const faq = textFAQ.map((items) =>
+  <details className='py-5'>
+      <summary className="py-2 font-normal text-xl cursor-pointer">{items.title}</summary>
+      <div className="px-4 pb-4">
+        <p className='whitespace-break-spaces text-justify'>{items.decs}</p>
+      </div>
+  </details>)
 
-        </div>
-  <div className='w-full -mt-[2950px] md:-mt-[1950px] z-[6]' >
-            <div>
-              <SingleCarousel img={sildes.url} ></SingleCarousel>
-              </div>
-              <div className='hidden md:inline'>
-                <Carousel responsive={responsive} className=' img-carousel pl-[0%] lg:pl-[35%] md:pl-[0%] pt-20'>
-                    {imageSlide}
-                </Carousel>
-                <div className='flex top-4 justify-center'>
-                    
-                </div>
-            </div>
-
-            <div className='shadow-lg rounded-lg w-full md:w-3/4 px-10 bg-white m-auto  my-5 md:my-10 '>
-                <div className='grid grid-row-2 '>
-                    <p class="text-2xl md:text-4xl font-bold py-5 m-auto">Hitung Estimasi Biayamu!</p>
-                    <form>
-                        <div class="mb-4 grid  grid-cols-1   md:grid-cols-5 gap-5">
-                            <div>
-                                <label className="block text-gray-700/70 text-sm font-bold mb-2" for="username">
-                                    Nama
-                                </label>
-                                <input
-                                    className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight   focus:outline-none focus:shadow-outline"
-                                    id="username" type="text" placeholder="Misalkan, Dedi" />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700/70 text-sm font-bold mb-2" for="phone">
-                                    Nomer Handphone
-                                </label>
-                                <input
-                                    className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="phone" type="number" placeholder="+62 812 XXX XXX" />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700/70 text-sm font-bold mb-2" for="email">
-                                    Email
-                                </label>
-                                <input
-                                    className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="email" type="text" placeholder="Misalkan, dedi@mail.com" />
-                            </div>
-                            <div>
-                                <label className="block text-gray-700/70 text-sm font-bold mb-2" for="email">
-                                    Note
-                                </label>
-                                <textarea
-                                    className="shadow appearance-none border rounded w-full py-3 px-6 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="email" type="text" placeholder="Misalkan, Bagaimana saya ingin custom bagian..." />
-                            </div>
-                            <div>
-                                <button
-                                    class="mt-6 bg-pengrajin-blue hover:bg-pengrajin-blue/50 text-white font-bold py-3 px-10 w-full  rounded focus:outline-none focus:shadow-outline duration-300"
-                                    type="button">
-                                    Tanya Harga
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-
-        <div className='container mx-auto flex grid justify-stretch  w-full md:w-3/4 '>
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
-                <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <div className='grid grid-cols-1 lg:grid-cols-4'>
-                        <span className='text-8xl lg:text-5xl grid  place-items-center '>
-                       
-                          <CubeSharp
-                            color={'#00000'} 
-                            height="80px"
-                            width="80px"
-                          />
-                        </span>
-                        <div className='col-span-3'>
-                            <p className='font-bold text-xl'>Japanti Design</p>
-                            <p className='font-bold text-m text-gray-400'>Desain space-saving oleh desainer propesional
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <div className='grid grid-cols-1 lg:grid-cols-4'>
-                        <span className='text-8xl lg:text-5xl grid  place-items-center '>
-                        <Wallet
-                            color={'#00000'} 
-                            height="80px"
-                            width="80px"
-                          />
-                        </span>
-                        <div className='col-span-3'>
-                            <p className='font-bold text-xl'>36x Cicilan</p>
-                            <p className='font-bold text-m text-gray-400'>bayar lebih ringan, transaksi jadi makain mudah</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <div className='grid grid-cols-1 lg:grid-cols-4'>
-                        <span className='text-8xl lg:text-5xl grid place-items-center'>
-                        <Time
-                            color={'#00000'} 
-                            height="80px"
-                            width="80px"
-                          />
-                        </span>
-                        <div className='col-span-3'>
-
-                            <p className='font-bold text-xl '>Garansi 2 Tahun</p>
-                            <p className='font-bold text-m  text-gray-400'>jaminan barang berkualitas bikin tenang & nyaman</p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div className='container'>
-                <div className='m-auto py-20  '>
-              <p className='text-4xl md:text-5xl font-bold text-center'>Upgrade Interior untuk Kebiasaan Barumu</p>
-                </div>
-
-                <div className='container flex grid justify-stretch'>
-
-                    <div className='grid grid-cols-2 md:grid-cols-3 gap-5'>
-                        {categoryCard}
-                    </div>
-                </div>
-            </div>
-            <div className='container '>
-              <div className='grid  md:grid-cols-2 grid-cols-1 mt-[130px] md:mt-[200px] gap-10 '>
-                <div className='grid grid-cols-4 gap-4  text-center'>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/mandiri.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20' alt='mandiri'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bni.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20' alt=''></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bca.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bri.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/maybank.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/citibank.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/ocbc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/hsbc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/mnc.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/bukopin.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/panin.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-                  <div src="" className='border border-solid border-1 rounded-lg px-5 py-6 shadow-lg'>
-                    <img className='m-auto' src='https://media.dekoruma.com/homepage/interior/banks/permata.png?dpr=1&fit=bounds&format=png8&optimize=high&quality=20'></img>
-                  </div>
-
-                </div>
-                <div className='px-5'>
-                  <p className='text-5xl font-bold mb-5'>Cicilan 0% Hingga 36 Bulan</p>
-                  <p className='font-medium text-2xl text-gray-400'>Kamu bisa melakukan cicilan 0% dalam waktu 3, 6, 12, 18, 24, hingga 36 bulan</p>
-                  <button
-                    class="mt-6 border-pengrajin-blue border-2  text-pengrajin-blue font-bold py-3 px-10  rounded focus:outline-none focus:shadow-outline duration-300"
-                    type="button">
-                    Lihat Selengkapnya
-                  </button>
-                </div>
-
-
-              </div>
-            </div>
-            <section className="mt-5">
-	<div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
-		<h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">FAQ</h2>
-		<div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
-			{faq}
-		</div>
-	</div>
-</section>
-        </div>
-
+  const slideImg = sildes.map((items) =>
+  <SplideSlide>
+    <div className="max-w-m rounded overflow-hidden bg-white">
+      <img className="w-full h-[200px] lg:h-[430px] bg-black" src={items.url}></img>
+      <div className=" py-4">
+        <p>@nameInstagram</p>
+      </div>
     </div>
+  </SplideSlide> 
+  )
+
+const slideProduct = sildeProducts.map((items) =>
+<SplideSlide>
+  <div className="max-w-m rounded overflow-hidden bg-white">
+    <img className="w-full h-[200px] lg:h-[300px] bg-black" src={items.url}></img>
+    <div className=" py-4">
+      <p>{items.name}</p>
+      <p><a className='font-bold'>{items.rent}</a> - {items.price}</p>
+    </div>
+  </div>
+</SplideSlide> 
+
+  
+)
+  return (
+   <>
+    <div className='w-full h-auto bg-pengrajin-wash relative   '>
+      <div className='h-[700px] grid grid-cols-1 lg:grid-cols-3 '>
+        <div className='m-auto'>
+          <div className='pl-[60px]  md:pl-[120px] lg: pl-[140px] px-32'>
+            <p className='font-semibold text-3xl md:text-4xl lg:text-4xl '>75% off – our biggest sale of the year.</p>
+              <br/><br/>
+                <p className='font-normal text-lg'>Save big on your first month of furniture and décor rental, just in time for the summer moving season.*</p>
+                <br/><br/>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold py-4 px-6 rounded-full">Start Shopping</button>
+              </div>
+            </div>
+          <div className=' col-span-2  relative bg-cover bg-no-repeat bg-center  h-full w-full lg:inline hidden'>
+            <img className='h-full w-full absolute' src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'></img>
+        </div>
+      </div>
+      <img className='h-full w-full relative inline lg:hidden' src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'></img>
+    </div>
+    <div className='xl:w-3/4 w-full m-auto '>
+        <div className='my-10'>
+          <div className='grid grid-cols-2 lg:grid-cols-4'>
+              <div className='grid grid-cols-1 lg:grid-cols-4 p-5 '>
+                <div className='m-auto'>
+                  <PlayForward 
+                  color={'#007bff'} 
+                  height="50px"
+                  width="50px" />
+                </div>
+                <p className=' col-span-3 m-auto font-bold text-m'>Fast, free delivery & assembly</p>
+              </div>
+              <div className='grid grid-cols-1 lg:grid-cols-4 p-5 '>
+                <div className='m-auto'>
+                  <BagCheck 
+                  color={'#007bff'} 
+                  height="50px"
+                  width="50px" />
+                </div>
+                <p className=' col-span-3 m-auto font-bold text-m '>Convenient rent or buy options</p>
+              </div>
+              <div className='grid grid-cols-1 lg:grid-cols-4 p-5 '>
+                <div className='m-auto'>
+                  <Cash 
+                  color={'#007bff'} 
+                  height="50px"
+                  width="50px" />
+                </div>
+                <p className=' col-span-3 m-auto font-bold text-m '>Low upfront costs for all rentals</p>
+              </div>
+              <div className='grid grid-cols-1 lg:grid-cols-4 p-5 '>
+                <div className='m-auto'>
+                  <Pricetag 
+                  color={'#007bff'} 
+                  height="50px"
+                  width="50px" />
+                </div>
+                <p className=' col-span-3 m-auto font-bold text-m '>Flexibility to buy out rental items later</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div className='xl:w-3/4 w-full m-auto '>
+        <div className=' grid grid-cols-1 lg:grid-cols-2'>
+        <div className=''>
+      <img  className='w-full h-full bg-cover bg-no-repeat bg-center' src='https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fservice_area_widget.3cb6f965.jpg&w=2400&q=75'></img>
+        </div>
+
+          <div className='p-2 pl-2 lg:pl-10'>
+            <p className='font-semibold text-5xl'>Fernish delivers to:</p>
+            <ul className="pl-5 my-5 list-disc text-xl">
+              <li> NYC area</li>
+              <li> DC area (plus parts of MD & VA)</li>
+              <li> Los Angeles area</li>
+              <li> Orange County area</li>
+              <li> San Diego area</li>
+              <li> Seattle area</li>
+              <li> Austin area</li>
+              <li> Dallas-Fort Worth area</li>
+            </ul>
+            <div className='w-full text-xl bg-pengrajin-wash m-auto h-auto py-6 te xt-center px-10'>
+              <p><a className='font-bold'>Enter your ZIP code</a> to see if we deliver to your area or let us know where you’d like us to go next.</p>
+              <div className='w-1/2 grid grid-cols-1 lg:grid-cols-2 m-auto my-2'>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="zipcode" type="text" placeholder="Zip Code"></input>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold p-2 mx-5 rounded-full">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <div className='grid grid-cols-1 lg:grid-cols-3  text-2xl text-center'>
+              <div className='p-20 m-auto'>
+                <p className=' '>“It's like Rent-the-Runway, but for sofas.”</p>
+                <br/><br/>
+                <p className='font-mono tracking-widest'>FAST COMPANY</p>
+              </div>
+              <div className='p-20 m-auto  lg:inline hidden'>
+                <p className=''>“Upscale furniture without going all-in on expensive long term purchases.”</p>
+                <br/>
+                <p className='font-mono tracking-widest'>THE NEW YORK TIMES</p>
+              </div>
+              <div className='p-20 m-auto  lg:inline hidden '>
+                <p className=' '>“The trendiest online furniture-rental company.”</p>
+                <br/><br/>
+                <p className='font-mono tracking-widest'>NEW YORK MAGAZINE</p>
+              </div>
+          </div>
+          
+          <p className='text-4xl font-semibold my-5'>Shop by room</p>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
+            <div className="max-w-m  rounded overflow-hidden bg-white">
+                <img className=" w-full h-[200px] lg:h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2019/04/23/09/04/indoor-4148892_1280.jpg"></img>
+                <div className=" py-4">
+                <div className=" text-xl mb-2">Living Room</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white ">
+              <img className="w-full h-[200px] lg:h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2014/09/26/07/13/dining-tables-461863_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Dining Room</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white lg:inline hidden">
+              <img className="w-full h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2019/12/15/08/17/bedroom-4696556_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Bedroom</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white lg:inline hidden">
+              <img className="w-full h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2016/11/18/13/03/apple-1834328_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Office</div>
+              </div>
+            </div>
+          </div>
+          <p className='text-4xl font-semibold my-5'>Shop most popular</p>
+          <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10'>
+            <div className="max-w-m  rounded overflow-hidden bg-white">
+                <img className=" w-full h-[200px] lg:h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2016/11/19/13/06/bed-1839184_1280.jpg"></img>
+                <div className=" py-4">
+                <div className=" text-xl mb-2">Beds</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white ">
+              <img className="w-full h-[200px] lg:h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2016/12/30/07/59/kitchen-1940174_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Dining Tables</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white lg:inline hidden">
+              <img className="w-full h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2016/11/30/08/48/bedroom-1872196_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Seating</div>
+              </div>
+            </div>
+            <div className="max-w-m rounded overflow-hidden bg-white lg:inline hidden">
+              <img className="w-full h-[300px] bg-black" src="https://cdn.pixabay.com/photo/2017/03/28/12/17/chairs-2181994_1280.jpg"></img>
+              <div className=" py-4">
+                <div className=" text-xl mb-2">Desks</div>
+              </div>
+            </div>
+          </div>
+          <div className='bg-pengrajin-wash h-auto mb-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div className='inline lg:hidden'>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-delivery.2de22874.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto text-mono  p-20'>
+                <p className='font-medium text-6xl'>Hassle free.</p>
+                <br/>
+                <p className='font-normal text-lg'>We do the heavy lifting. Free delivery and assembly in as soon as 7 days.</p>
+              </div>
+              <div className='lg:inline hidden'>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-delivery.2de22874.jpg&w=2400&q=75"></img>
+              </div>
+            </div>
+          </div>
+          <div className='bg-sky-100 h-auto mb-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <div>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-rent-to-own.8612ee6b.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto text-mono p-20'>
+                <p className='font-medium text-6xl'>Risk free.</p>
+                <br/>
+                <p className='font-normal text-lg'>Furniture three ways. Rent, rent-to-own, or buy. Your furniture is as flexible as you need it to be.</p>
+              </div>
+            </div>
+          </div>
+          <div className='bg-pengrajin-wash h-auto mb-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <div className='lg:hidden inline'>
+                <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-waste-free.e08ff78b.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto text-mono  p-20'>
+                <p className='font-medium text-6xl'>Waste free.</p>
+                <br/>
+                <p className='font-normal text-lg'>Last year we saved 522 tons of furniture from landfills. With your help, we can do even more.</p>
+                <br/>
+              <img className='absolute w-8/12 md:w-auto' src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Freduce-refurbish-relove.4f0d6570.png&w=375&q=75"></img>
+
+              </div>
+              <div className='lg:inline hidden'>
+              <img class="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-waste-free.e08ff78b.jpg&w=2400&q=75"></img>
+              </div>
+            </div>
+          </div>
+          <div className='bg-sky-100 h-auto mb-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+              <div>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-lowcost.e76ff62e.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto text-mono p-20'>
+                <p className='font-medium text-6xl'>Home free.</p>
+                <br/>
+                <p className='font-normal text-lg'>It’s never been easier to create your space, with flexible pricing from $149/month.</p>
+              </div>
+            </div>
+          </div>
+          <div className='bg-pengrajin-wash h-auto mb-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div className='inline lg:hidden'>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-quality.2952fe08.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto text-mono  p-20'>
+                <p className='font-medium text-5xl'>Rent the brands you’d love to own.</p>
+                <br/>
+                <p className='font-normal text-lg'>Spruce up your living space, liven up your walls, or set up your home office - all with curated designer furniture.</p>
+                <br/>
+              <img className='absolute w-8/12 md:w-auto' src="https://fernish.com/_next/static/media/vp-logos.2110ed43.svg"></img>
+
+              </div>
+              <div className='lg:inline hidden'>
+              <img className="w-full bg-cover bg-center" src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fvp-quality.2952fe08.jpg&w=2400&q=75"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-full bg-pengrajin-wash h-auto mb-20'>
+          <div  className='w-3/4 m-auto py-20'>
+            <div className='grid grid-cols-1 lg:grid-cols-3'>
+              <div className='m-auto'>
+                <p className='font-medium text-5xl '>
+                Discover the perfect look for your home.
+                </p>
+                <br/>
+              <button className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold py-3 px-6 rounded-full mb-5">Browser the gallery</button>
+              </div>
+              <div className='m-auto mb-5'>
+                <img  className='w-80 bg-contain bg-center' src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcozy-corner.015d252c.jpg&w=2400&q=75"></img>
+              </div>
+              <div className='m-auto'>
+                <img  src="https://fernish.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdream-bedroom.2cb24eb9.jpg&w=2400&q=75"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-full lg:w-3/4 h-auto m-auto'>
+          <p className='text-center font-medium text-3xl my-10 '>Get inspired by real Fernish customers.</p>
+            <Splide 
+                    options={ {
+                      perPage: 3,
+                      breakpoints: {
+                        640: {
+                          perPage: 2,
+                        },
+                      },
+                      rewind : true,
+                      gap    : '1rem',
+                    } }
+                    >
+               {slideImg}
+ 
+            </Splide>
+
+          <div className='content-faq'>
+            <div className="container flex flex-col justify-center p-4 mx-auto lg:p-8">
+              <h2 className="mb-12 text-1xl font-normal leading-none text-center sm:text-3xl">Frequently Asked Questions</h2>
+              <div className="flex flex-col divide-y sm:px-8 lg:px-12 xl:px-32 divide-gray-700">
+                {faq}
+              </div>
+              </div>
+              <p className='text-xl font-bold text-center underline decoration-4 cursor-pointer '> <a className='hover:text-pengrajin-blue-dark'>See all FAQs</a></p>
+          </div> 
+
+            <Splide 
+                    options={ {
+                      perPage: 4,
+                      breakpoints: {
+                        640: {
+                          perPage: 2,
+                        },
+                      },
+                      rewind : true,
+                      gap    : '1rem',
+                    } }
+                    >
+               {slideProduct}
+            </Splide>
+        </div>
+
+   </>
   )
 }
 
-export default Content
+export default content 

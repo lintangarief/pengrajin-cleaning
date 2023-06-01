@@ -13,6 +13,10 @@ import '@ionic/core/css/text-alignment.css';
 import '@ionic/core/css/text-transformation.css';
 import '@ionic/core/css/flex-utils.css';
 import '@ionic/core/css/display.css';
+import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/skyblue';
+import '@splidejs/react-splide/css/sea-green';
+import '@splidejs/react-splide/css/core';
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     ionDefineCustomElements(window)

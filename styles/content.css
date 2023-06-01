@@ -8,6 +8,18 @@
     background-repeat: no-repeat;
 }
 
+
+.font-gt{
+    font-family: 'GT Walsheim';
+}
+
+.bg-hero-proto{
+    background: url(https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg);
+    overflow: hidden;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
 .img-container {
     position: absolute;
     left: 0px;

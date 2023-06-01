@@ -1,15 +1,17 @@
 {
-  "name": "pengrajin-interior",
+  "name": "pengrajin-cleaning",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@ionic/core": "^7.0.7",
     "@ionic/react": "^7.0.7",
     "@material-tailwind/react": "^2.0.0",
+    "@splidejs/react-splide": "^0.7.12",
     "@swiftcarrot/react-ionicons": "^6.0.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "gtwalsheim4web": "^1.0.2",
     "ionicons": "^7.1.1",
     "next": "^13.4.3",
     "next-pwa": "^5.6.0",
