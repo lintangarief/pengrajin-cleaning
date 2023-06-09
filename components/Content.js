@@ -1,5 +1,5 @@
-import React from 'react'
-import { PlayForward, BagCheck, Cash, Pricetag } from 'react-ionicons'
+import React , { useState } from 'react'
+import { PlayForward, BagCheck, Cash, Pricetag,Close } from 'react-ionicons'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 
 function content() {
@@ -138,12 +138,14 @@ const slideProduct = sildeProducts.map((items) =>
     </div>
   </div>
 </SplideSlide> 
-
-  
 )
+
+
+
   return (
    <>
-    <div className='w-full h-auto bg-pengrajin-wash relative   '>
+ 
+    <div className='w-full h-auto bg-pengrajin-wash relative'>
       <div className='h-[700px] grid grid-cols-1 lg:grid-cols-3 '>
         <div className='m-auto'>
           <div className='pl-[60px]  md:pl-[120px] lg: pl-[140px] px-32'>
@@ -160,6 +162,7 @@ const slideProduct = sildeProducts.map((items) =>
       </div>
       <img className='h-full w-full relative inline lg:hidden' src='https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg'></img>
     </div>
+    
     <div className='xl:w-3/4 w-full m-auto '>
         <div className='my-10'>
           <div className='grid grid-cols-2 lg:grid-cols-4'>
