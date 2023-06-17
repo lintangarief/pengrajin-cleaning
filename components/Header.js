@@ -75,7 +75,7 @@ function Header() {
             </ul>
           </div>
           <div className='col-span-3 m-auto'>
-            <p className='text-xl font-semibold '>PENGRAJIN WASH</p>
+            <p className='text-xl font-semibold '>PENGRAJIN CLEANING</p>
           </div>
           <div>
             <div className='icon grid  gap-5 lg:gap-0 grid-cols-2 lg:grid-cols-10 flex items-center'>

@@ -27,6 +27,20 @@ function content() {
   ]
 
   
+  const kodePosBdg = [
+    40184, 40182, 40183, 40184, 40181, 40184, 40291, 40291, 40291, 40291, 40293, 40294, 40293, 40293, 40241,
+    40241, 40243, 40242, 40242, 40243, 40222, 40223, 40227, 40224, 40225, 40221, 40266, 40287, 40267, 40256,
+    40212, 40212, 40214, 40214, 40215, 40213, 40215, 40211, 40114, 40115, 40116, 40275, 40273, 40275, 40271,
+    40274, 40272, 40274, 40273, 40232, 40232, 40231, 40233, 40231, 40239, 40238, 40236, 40235, 40237, 40234,
+    40287, 40286, 40286, 40286, 40191, 40122, 40124, 40123, 40121, 40124, 40125, 40192, 40121, 40125, 40614,
+    40614, 40615, 40615, 40172, 40174, 40173, 40173, 40171, 40175, 40142, 40141, 40143, 40294, 40294, 40294,
+    40294, 40131, 40135, 40132, 40132, 40133, 40134, 40294, 40294, 40294, 40294, 40283, 40281, 40282, 40284,
+    40281, 40285, 40262, 40265, 40261, 40263, 40262, 40261, 40264, 40195, 40195, 40195, 40195, 40614, 40614,
+    40614, 40614, 40292, 40292, 40295, 40292, 40254, 40251, 40252, 40253, 40255, 40254, 40252, 40162, 40161,
+    40162, 40163, 40164, 40153, 40154, 40151, 40152, 40117, 40111, 40112, 40113, 40611, 40617, 40619, 40616, 40618
+  ];
+
+
   const sildeProducts = [
     {
       name: 'Reese 3-Piece Sofa, Platinum',
@@ -140,6 +154,22 @@ const slideProduct = sildeProducts.map((items) =>
 </SplideSlide> 
 )
 
+let [cekCode,setcekCode]=useState(true);
+
+ 
+const [inputData, setInputData] = useState(null);
+const [isDataFounded, setIsDataFounded] = useState(false);
+const [isAppeared, setIsAppeared] = useState(false);
+  
+const handleInputChange = (event) => {
+    setInputData(event.target.value);
+}
+
+const handleFormChecker = (event) =>{
+  event.preventDefault();
+  setIsAppeared(true)
+  setIsDataFounded(kodePosBdg.includes(parseInt(inputData)));
+}
 
 
   return (
@@ -225,10 +255,16 @@ const slideProduct = sildeProducts.map((items) =>
             </ul>
             <div className='w-full text-xl bg-pengrajin-wash m-auto h-auto py-6 te xt-center px-10'>
               <p><a className='font-bold'>Enter your ZIP code</a> to see if we deliver to your area or let us know where you’d like us to go next.</p>
-              <div className='w-1/2 grid grid-cols-1 lg:grid-cols-2 m-auto my-2'>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="zipcode" type="text" placeholder="Zip Code"></input>
-                <button class="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold p-2 mx-5 rounded-full">Submit</button>
+              <div className='w-3/4  m-auto my-2'>
+                <form className=' grid grid-cols-4 border-2' onSubmit={handleFormChecker}>
+                <input class="col-span-2 cols-inline shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value={inputData} onChange={handleInputChange} id="zipcode" type="text" placeholder="Zip Code"></input>
+                <button class=" col-span-2 inline bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold p-2 mx-5 rounded-full" type='submit'>Submit</button>
+                </form>
               </div>
+              <div className={`  ${isAppeared ? 'inline' : 'hidden'}`}> 
+                  {isDataFounded ? <p className=' mt-5 text-center'>Zip Code exists!</p> : <p className=' mt-5 text-center'>Zip Code does not exist!</p>}
+              </div>
+           
             </div>
           </div>
         </div>

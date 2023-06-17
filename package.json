@@ -6,6 +6,7 @@
     "@ionic/core": "^7.0.7",
     "@ionic/react": "^7.0.7",
     "@material-tailwind/react": "^2.0.0",
+    "@next/font": "^13.4.5",
     "@splidejs/react-splide": "^0.7.12",
     "@swiftcarrot/react-ionicons": "^6.0.2",
     "@testing-library/jest-dom": "^5.16.5",

@@ -17,10 +17,22 @@ import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/skyblue';
 import '@splidejs/react-splide/css/sea-green';
 import '@splidejs/react-splide/css/core';
+import {Quicksand} from '@next/font/google'
+
+
+
+const quickSand = Quicksand({
+  subsets : ['latin'],
+  weight :'600',
+})
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     ionDefineCustomElements(window)
   })
 
-   return <Component className="App" {...pageProps} />
+   return (
+   <main className={quickSand.className}>
+     <Component className="App" {...pageProps} />
+   </main>
+   )
 }
