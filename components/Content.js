@@ -175,15 +175,15 @@ const handleFormChecker = (event) =>{
   return (
    <>
  
-    <div className='w-full h-auto bg-pengrajin-wash relative'>
+    <div className='w-full h-auto bg-pengrajin-blue relative'>
       <div className='h-[700px] grid grid-cols-1 lg:grid-cols-3 '>
-        <div className='m-auto'>
+        <div className='m-auto text-white '>
           <div className='pl-[60px]  md:pl-[120px] lg: pl-[140px] px-32'>
             <p className='font-semibold text-3xl md:text-4xl lg:text-4xl '>75% off – our biggest sale of the year.</p>
               <br/><br/>
                 <p className='font-normal text-lg'>Save big on your first month of furniture and décor rental, just in time for the summer moving season.*</p>
                 <br/><br/>
-                <button className="bg-blue-500 hover:bg-blue-700 text-white text-lg font-bold py-4 px-6 rounded-full">Start Shopping</button>
+                <button className="bg-white hover:bg-zinc-100 text-pengrajin-blue text-lg font-bold py-4 px-6 rounded-full">Start Shopping</button>
               </div>
             </div>
           <div className=' col-span-2  relative bg-cover bg-no-repeat bg-center  h-full w-full lg:inline hidden'>
